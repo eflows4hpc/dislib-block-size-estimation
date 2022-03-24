@@ -7,11 +7,6 @@ import dislib as ds
 np.set_printoptions(precision=3)
 
 
-# Author: Riccardo Cantini <rcantini@dimes.unical.it>
-#         Alessio Orsino <aorsino@dimes.unical.it>
-#         DIMES Department, University of Calabria, Italy
-#
-
 class GridSearch:
     """
         class implementing the grid search procedure
