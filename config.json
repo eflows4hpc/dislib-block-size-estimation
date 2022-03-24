@@ -1,0 +1,59 @@
+{
+  "algorithms":
+      {"RandomForestClassifier":
+            {
+              "module_name": "dislib.classification",
+              "class_name": "RandomForestClassifier",
+              "supervised": "True"
+            },
+      "KMeans":
+            {
+              "module_name": "dislib.cluster",
+              "class_name": "KMeans",
+              "supervised": "False"
+            }
+      },
+  "var_config":
+      {
+        "number_of_row_partitions": [1,4,32,64],
+        "number_of_columns_partitions": [1],
+        "model_path_name": "stackedCls.pkl",
+        "training_dataset_path_name": "training_dataset.csv",
+        "execution_log_path_name": "execution_log.json",
+        "execution_info_path_name": "execution_info.txt",
+        "classification_metrics_path_name": "classification_metrics.txt",
+        "test_failed": -1
+      },
+  "exec_config": {
+    "RandomForestClassifier": [
+      {
+        "dataset_path": "datasets/banknote.csv",
+        "params": {
+          "random_state": 21
+        }
+      },
+      {
+        "dataset_path": "datasets/cleveland.csv",
+        "params": {
+          "random_state": 18
+        }
+      }
+    ],
+    "KMeans": [
+      {
+        "dataset_path": "datasets/diabetes.csv",
+        "params": {
+          "random_state": 21,
+          "n_clusters": 2
+        }
+      },
+      {
+        "dataset_path": "datasets/titanic.csv",
+        "params": {
+          "random_state": 15,
+          "n_clusters": 2
+        }
+      }
+    ]
+  }
+}
