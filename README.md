@@ -14,8 +14,8 @@ The ***config.json*** file contains all the configuration parameters, listed in 
 - *number_of_row_partitions*: a list containing all the partitions along rows to be tested during the grid search.
 - *number_of_column_partitions*: a list containing all the partitions along columns to be tested during the grid search.
 - *model_path_name*: the path where the trained Machine Learning model is stored.
-- *training_dataset_path_name*: "training_dataset.csv",
-- *execution_log_path_name*: the path where the log of executions used for creating the training dataset is stored.
+- *training_dataset_path_name*: the path where the training set, used for training the Machine Learning model, is stored.
+- *execution_log_path_name*: the path where the log of executions, used for creating the training dataset, is stored.
 - *execution_info_path_name*: the path where the file containing the information about the performed executions is stored.
 - *classification_metrics_path_name*: the path where the file containing the classificaiton metrics is stored.
 - *test_failed*: constant to be used for the elapsed time in the case of a filed test.
