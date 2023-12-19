@@ -4,6 +4,7 @@ import importlib
 import time
 import json
 import dislib as ds
+from pycompss.api.api import barrier
 np.set_printoptions(precision=3)
 
 
@@ -170,6 +171,7 @@ class GridSearch:
                 alg_instance.fit(ds_x_train, ds_y_train)
             else:
                 alg_instance.fit(ds_x_train)
+            barrier()
             end = time.time()
             el_time = end - start
             exec_info.write("Elapsed time: " + str(el_time) + "\n")
